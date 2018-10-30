@@ -7,7 +7,7 @@ using System.Linq;
 namespace FabrikamFiber.SeleniumTests
 {
     [TestClass]
-	[Ignore]
+    [Ignore]
     public class PartsUnlimitedTests
     {
         static IWebDriver driver;
@@ -15,13 +15,13 @@ namespace FabrikamFiber.SeleniumTests
         [AssemblyInitialize]
         public static void Setup(TestContext context)
         {
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(@"C:\Chromedriver");
         }
 
         [AssemblyCleanup]
         public static void Cleanup()
         {
-            driver.Quit();
+                driver.Quit();
         }
 
         [TestMethod]
